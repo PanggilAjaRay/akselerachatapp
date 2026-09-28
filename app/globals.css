@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-panel: #ffffff;
+  --bg-hover: #e5e7eb;
+  --text-primary: #000000;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --border: #d1d5db;
+  --accent: #000000;
+  --accent-light: #e5e7eb;
+  --bubble-self: #000000;
+  --bubble-self-text: #ffffff;
+  --bubble-other: #f3f4f6;
+  --bubble-other-text: #000000;
+}
+
+.theme-light-only {
+  display: block;
+}
+
+.theme-dark-only {
+  display: none;
+}
+
+.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-panel: #171717;
+  --bg-hover: #262626;
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+  --border: #404040;
+  --accent: #ffffff;
+  --accent-light: #262626;
+  --bubble-self: #ffffff;
+  --bubble-self-text: #000000;
+  --bubble-other: #262626;
+  --bubble-other-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Nunito', system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s, color 0.2s;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 99px;
+}
+
+.dark .theme-light-only {
+  display: none !important;
+}
+
+.dark .theme-dark-only {
+  display: block !important;
+}

@@ -1,0 +1,625 @@
+
+> akselerachatapp@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.10.11.186:3000
+- Environments: .env
+✓ Ready in 420ms
+✓ Running next.config.ts took 49ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead.
+
+  To migrate automatically, run:
+  npx @next/codemod@canary middleware-to-proxy .
+
+  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+⚠ Blocked cross-origin request to Next.js dev resource /_next/hmr from "10.10.11.186".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['10.10.11.186'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET /login? 200 in 496ms (next.js: 256ms, proxy.ts: 17ms, application-code: 222ms)
+ GET /login? 200 in 69ms (next.js: 5ms, proxy.ts: 10ms, application-code: 55ms)
+ GET /login? 200 in 73ms (next.js: 6ms, proxy.ts: 10ms, application-code: 57ms)
+ GET /login? 200 in 52ms (next.js: 5ms, proxy.ts: 8ms, application-code: 39ms)
+ GET /login? 200 in 55ms (next.js: 4ms, proxy.ts: 6ms, application-code: 46ms)
+ GET /login 200 in 75ms (next.js: 9ms, proxy.ts: 6ms, application-code: 61ms)
+ GET /api/auth/session 200 in 997ms (next.js: 920ms, proxy.ts: 11ms, application-code: 66ms)
+ GET /api/auth/session 200 in 30ms (next.js: 13ms, proxy.ts: 4ms, application-code: 12ms)
+ GET /api/auth/session 200 in 22ms (next.js: 10ms, proxy.ts: 6ms, application-code: 5ms)
+ GET /api/auth/session 200 in 20ms (next.js: 8ms, proxy.ts: 5ms, application-code: 7ms)
+ GET /api/auth/providers 200 in 26ms (next.js: 15ms, proxy.ts: 4ms, application-code: 7ms)
+ GET /api/auth/csrf 200 in 12ms (next.js: 4ms, proxy.ts: 3ms, application-code: 4ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`passwordHash`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+[31m[auth][error][0m CredentialsSignin: Read more at https://errors.authjs.dev#credentialssignin
+    at Module.callback (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_@auth_core_0gltlle._.js:1182:30)
+    at async AuthInternal (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_@auth_core_0gltlle._.js:2511:24)
+    at async Auth (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_@auth_core_0gltlle._.js:350:34)
+    at async AppRouteRouteModule.do (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js:5:42793)
+    at async AppRouteRouteModule.handle (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js:5:50547)
+    at async responseGenerator (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_next_06xpkpi._.js:5328:30)
+    at async AppRouteRouteModule.handleResponse (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js:1:250435)
+    at async handleResponse (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_next_06xpkpi._.js:5400:32)
+    at async Module.handler (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_next_06xpkpi._.js:5520:9)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1537:9)
+    at async DevServer.renderPageComponent (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1589:24)
+    at async DevServer.renderToResponseImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1639:32)
+    at async DevServer.pipeImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1088:25)
+    at async NextNodeServer.handleCatchallRenderRequest (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\next-server.js:338:17)
+    at async DevServer.handleRequestImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:979:17)
+    at async D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\dev\next-dev-server.js:426:20
+    at async Span.traceAsyncFn (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\trace\trace.js:164:20)
+    at async DevServer.handleRequest (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\dev\next-dev-server.js:422:24)
+    at async invokeRender (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\router-server.js:306:21)
+    at async handleRequest (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\router-server.js:508:24)
+    at async requestHandlerImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\router-server.js:565:13)
+    at async Server.requestListener (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\start-server.js:225:13)
+ POST /api/auth/callback/credentials? 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/auth/session 200 in 11ms (next.js: 4ms, proxy.ts: 3ms, application-code: 4ms)
+ GET /api/auth/providers 200 in 22ms (next.js: 12ms, proxy.ts: 4ms, application-code: 5ms)
+ GET /api/auth/csrf 200 in 12ms (next.js: 3ms, proxy.ts: 3ms, application-code: 6ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`passwordHash`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+[31m[auth][error][0m CredentialsSignin: Read more at https://errors.authjs.dev#credentialssignin
+    at Module.callback (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_@auth_core_0gltlle._.js:1182:30)
+    at async AuthInternal (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_@auth_core_0gltlle._.js:2511:24)
+    at async Auth (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_@auth_core_0gltlle._.js:350:34)
+    at async AppRouteRouteModule.do (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js:5:42793)
+    at async AppRouteRouteModule.handle (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js:5:50547)
+    at async responseGenerator (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_next_06xpkpi._.js:5328:30)
+    at async AppRouteRouteModule.handleResponse (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js:1:250435)
+    at async handleResponse (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_next_06xpkpi._.js:5400:32)
+    at async Module.handler (D:\laragon\www\Akselerachatapp\akselerachatapp\.next\dev\server\chunks\node_modules_next_06xpkpi._.js:5520:9)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1537:9)
+    at async DevServer.renderPageComponent (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1589:24)
+    at async DevServer.renderToResponseImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1639:32)
+    at async DevServer.pipeImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:1088:25)
+    at async NextNodeServer.handleCatchallRenderRequest (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\next-server.js:338:17)
+    at async DevServer.handleRequestImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\base-server.js:979:17)
+    at async D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\dev\next-dev-server.js:426:20
+    at async Span.traceAsyncFn (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\trace\trace.js:164:20)
+    at async DevServer.handleRequest (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\dev\next-dev-server.js:422:24)
+    at async invokeRender (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\router-server.js:306:21)
+    at async handleRequest (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\router-server.js:508:24)
+    at async requestHandlerImpl (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\router-server.js:565:13)
+    at async Server.requestListener (D:\laragon\www\Akselerachatapp\akselerachatapp\node_modules\next\dist\server\lib\start-server.js:225:13)
+ POST /api/auth/callback/credentials? 200 in 14ms (next.js: 3ms, proxy.ts: 4ms, application-code: 8ms)
+ GET /api/auth/session 200 in 11ms (next.js: 3ms, proxy.ts: 3ms, application-code: 5ms)
+ GET /register 200 in 314ms (next.js: 276ms, proxy.ts: 3ms, application-code: 34ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`passwordHash`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `passwordHash`, `createdAt`) VALUES (?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `passwordHash` AS `passwordHash`, `createdAt` AS `createdAt`
+ POST /api/auth/register 201 in 432ms (next.js: 156ms, proxy.ts: 5ms, application-code: 271ms)
+ GET /login 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/auth/providers 200 in 21ms (next.js: 13ms, proxy.ts: 4ms, application-code: 4ms)
+ GET /api/auth/csrf 200 in 10ms (next.js: 4ms, proxy.ts: 3ms, application-code: 3ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`passwordHash`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials? 200 in 300ms (next.js: 4ms, proxy.ts: 5ms, application-code: 291ms)
+ GET /api/auth/session 200 in 27ms (next.js: 4ms, proxy.ts: 14ms, application-code: 9ms)
+ GET /chat 200 in 815ms (next.js: 713ms, proxy.ts: 9ms, application-code: 93ms)
+ GET /api/auth/session 200 in 59ms (next.js: 19ms, proxy.ts: 17ms, application-code: 23ms)
+ GET /api/auth/session 200 in 43ms (next.js: 13ms, proxy.ts: 15ms, application-code: 14ms)
+ GET /api/auth/session 200 in 60ms (next.js: 8ms, proxy.ts: 18ms, application-code: 34ms)
+ GET /api/auth/session 200 in 39ms (next.js: 10ms, proxy.ts: 14ms, application-code: 15ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 467ms (next.js: 395ms, proxy.ts: 17ms, application-code: 55ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 34ms (next.js: 3ms, proxy.ts: 16ms, application-code: 15ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` <> ? ORDER BY `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+ GET /api/users 200 in 274ms (next.js: 247ms, proxy.ts: 10ms, application-code: 18ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` <> ? ORDER BY `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+ GET /api/users 200 in 43ms (next.js: 5ms, proxy.ts: 13ms, application-code: 25ms)
+ GET /api/auth/session 200 in 35ms (next.js: 14ms, proxy.ts: 10ms, application-code: 11ms)
+ GET /api/auth/session 200 in 18ms (next.js: 5ms, proxy.ts: 6ms, application-code: 7ms)
+ GET /login 200 in 47ms (next.js: 4ms, proxy.ts: 6ms, application-code: 37ms)
+ GET /api/auth/session 200 in 25ms (next.js: 14ms, proxy.ts: 4ms, application-code: 7ms)
+ GET /api/auth/session 200 in 13ms (next.js: 5ms, proxy.ts: 4ms, application-code: 4ms)
+ GET /api/auth/session 200 in 13ms (next.js: 5ms, proxy.ts: 4ms, application-code: 4ms)
+ GET /api/auth/session 200 in 13ms (next.js: 5ms, proxy.ts: 5ms, application-code: 4ms)
+ GET /register 200 in 25ms (next.js: 7ms, proxy.ts: 3ms, application-code: 16ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`passwordHash`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `passwordHash`, `createdAt`) VALUES (?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `passwordHash` AS `passwordHash`, `createdAt` AS `createdAt`
+ POST /api/auth/register 201 in 264ms (next.js: 3ms, proxy.ts: 4ms, application-code: 257ms)
+ GET /login 200 in 23ms (next.js: 6ms, proxy.ts: 3ms, application-code: 13ms)
+ GET /api/auth/providers 200 in 21ms (next.js: 13ms, proxy.ts: 3ms, application-code: 5ms)
+ GET /api/auth/csrf 200 in 10ms (next.js: 4ms, proxy.ts: 3ms, application-code: 3ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`passwordHash`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials? 200 in 289ms (next.js: 6ms, proxy.ts: 5ms, application-code: 278ms)
+ GET /api/auth/session 200 in 16ms (next.js: 4ms, proxy.ts: 7ms, application-code: 6ms)
+ GET /chat 200 in 47ms (next.js: 7ms, proxy.ts: 9ms, application-code: 31ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 47ms (next.js: 6ms, proxy.ts: 19ms, application-code: 22ms)
+ GET /api/auth/session 200 in 44ms (next.js: 12ms, proxy.ts: 16ms, application-code: 16ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 55ms (next.js: 9ms, proxy.ts: 18ms, application-code: 28ms)
+ GET /api/auth/session 200 in 52ms (next.js: 18ms, proxy.ts: 18ms, application-code: 16ms)
+ GET /api/auth/session 200 in 29ms (next.js: 6ms, proxy.ts: 14ms, application-code: 9ms)
+ GET /api/auth/session 200 in 47ms (next.js: 23ms, proxy.ts: 11ms, application-code: 13ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` <> ? ORDER BY `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+ GET /api/users 200 in 32ms (next.js: 5ms, proxy.ts: 7ms, application-code: 20ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` <> ? ORDER BY `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+ GET /api/users 200 in 26ms (next.js: 3ms, proxy.ts: 8ms, application-code: 16ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE (EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) AND EXISTS(SELECT `t1`.`conversationId` FROM `main`.`Participant` AS `t1` WHERE (`t1`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t1`.`conversationId`) AND `t1`.`conversationId` IS NOT NULL))) LIMIT ? OFFSET ?
+prisma:query BEGIN IMMEDIATE
+prisma:query INSERT INTO `main`.`Conversation` (`id`, `createdAt`) VALUES (?,?) RETURNING `id` AS `id`
+prisma:query INSERT INTO `main`.`Participant` (`id`, `conversationId`, `userId`) VALUES (?,?,?), (?,?,?)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE `main`.`Conversation`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /api/conversations 201 in 37ms (next.js: 3ms, proxy.ts: 9ms, application-code: 26ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 22ms (next.js: 2ms, proxy.ts: 6ms, application-code: 14ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 27ms (next.js: 4ms, proxy.ts: 7ms, application-code: 16ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 1174ms (next.js: 1122ms, proxy.ts: 11ms, application-code: 41ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 30ms (next.js: 11ms, proxy.ts: 7ms, application-code: 12ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query BEGIN IMMEDIATE
+prisma:query INSERT INTO `main`.`Message` (`id`, `body`, `conversationId`, `senderId`, `createdAt`) VALUES (?,?,?,?,?) RETURNING `id` AS `id`
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query COMMIT
+(node:17576) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+⨯ Error [PusherRequestError]: Unexpected status code 400
+    at async POST (app\api\conversations\[id]\messages\route.ts:65:3)
+  63 |
+  64 |   // Trigger Pusher real-time event
+> 65 |   await pusherServer.trigger(
+     |   ^
+  66 |     `private-conversation-${conversationId}`,
+  67 |     "new-message",
+  68 |     message {
+  url: 'https://api-ap1.pusher.com/apps/your_app_id/events?auth_key=your_app_key&auth_timestamp=1790489998&auth_version=1.0&body_md5=3208f1553d02e05751239ef14b93ebaa&auth_signature=df1d55454cf83c7decf0ee5cbbdf0bdaa8412d07dac5173eb7c1414976e8ba02',
+  error: undefined,
+  status: 400,
+  body: 'auth_key should be a valid app key\n'
+}
+ POST /api/conversations/cmujfiij30002t5k8vhxif72a/messages 500 in 588ms (next.js: 11ms, proxy.ts: 8ms, application-code: 568ms)
+ GET /api/auth/session 200 in 32ms (next.js: 14ms, proxy.ts: 10ms, application-code: 8ms)
+ GET /api/auth/session 200 in 20ms (next.js: 4ms, proxy.ts: 8ms, application-code: 8ms)
+ GET /chat 200 in 49ms (next.js: 4ms, proxy.ts: 9ms, application-code: 37ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 74ms (next.js: 5ms, proxy.ts: 21ms, application-code: 47ms)
+ GET /api/auth/session 200 in 72ms (next.js: 33ms, proxy.ts: 18ms, application-code: 21ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 50ms (next.js: 5ms, proxy.ts: 21ms, application-code: 24ms)
+ GET /api/auth/session 200 in 47ms (next.js: 15ms, proxy.ts: 18ms, application-code: 14ms)
+ GET /api/auth/session 200 in 23ms (next.js: 5ms, proxy.ts: 10ms, application-code: 8ms)
+ GET /api/auth/session 200 in 25ms (next.js: 5ms, proxy.ts: 12ms, application-code: 8ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 52ms (next.js: 14ms, proxy.ts: 8ms, application-code: 30ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 41ms (next.js: 7ms, proxy.ts: 9ms, application-code: 25ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query BEGIN IMMEDIATE
+prisma:query INSERT INTO `main`.`Message` (`id`, `body`, `conversationId`, `senderId`, `createdAt`) VALUES (?,?,?,?,?) RETURNING `id` AS `id`
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query COMMIT
+⨯ Error [PusherRequestError]: Unexpected status code 400
+    at async POST (app\api\conversations\[id]\messages\route.ts:65:3)
+  63 |
+  64 |   // Trigger Pusher real-time event
+> 65 |   await pusherServer.trigger(
+     |   ^
+  66 |     `private-conversation-${conversationId}`,
+  67 |     "new-message",
+  68 |     message {
+  url: 'https://api-ap1.pusher.com/apps/your_app_id/events?auth_key=your_app_key&auth_timestamp=1790490009&auth_version=1.0&body_md5=c0fe10cdaf98cab010cd248eeaa7e665&auth_signature=36eebe436515acbd3a185ac0fbd838e87bc266d0dd6ea8efbcaaa76983e9dd4c',
+  error: undefined,
+  status: 400,
+  body: 'auth_key should be a valid app key\n'
+}
+ POST /api/conversations/cmujfiij30002t5k8vhxif72a/messages 500 in 144ms (next.js: 12ms, proxy.ts: 8ms, application-code: 124ms)
+ GET /api/auth/session 200 in 29ms (next.js: 14ms, proxy.ts: 7ms, application-code: 8ms)
+ GET /api/auth/session 200 in 17ms (next.js: 3ms, proxy.ts: 7ms, application-code: 6ms)
+ GET /chat 200 in 41ms (next.js: 6ms, proxy.ts: 8ms, application-code: 28ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/auth/session 200 in 39ms (next.js: 18ms, proxy.ts: 10ms, application-code: 11ms)
+ GET /api/conversations 200 in 45ms (next.js: 4ms, proxy.ts: 13ms, application-code: 28ms)
+ GET /api/auth/session 200 in 44ms (next.js: 14ms, proxy.ts: 12ms, application-code: 17ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 46ms (next.js: 5ms, proxy.ts: 12ms, application-code: 28ms)
+ GET /api/auth/session 200 in 59ms (next.js: 37ms, proxy.ts: 12ms, application-code: 10ms)
+ GET /api/auth/session 200 in 20ms (next.js: 5ms, proxy.ts: 8ms, application-code: 8ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 38ms (next.js: 13ms, proxy.ts: 8ms, application-code: 17ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 34ms (next.js: 4ms, proxy.ts: 9ms, application-code: 21ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query BEGIN IMMEDIATE
+prisma:query INSERT INTO `main`.`Message` (`id`, `body`, `conversationId`, `senderId`, `createdAt`) VALUES (?,?,?,?,?) RETURNING `id` AS `id`
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query COMMIT
+⨯ Error [PusherRequestError]: Unexpected status code 400
+    at async POST (app\api\conversations\[id]\messages\route.ts:65:3)
+  63 |
+  64 |   // Trigger Pusher real-time event
+> 65 |   await pusherServer.trigger(
+     |   ^
+  66 |     `private-conversation-${conversationId}`,
+  67 |     "new-message",
+  68 |     message {
+  url: 'https://api-ap1.pusher.com/apps/your_app_id/events?auth_key=your_app_key&auth_timestamp=1790490030&auth_version=1.0&body_md5=999797dcb96b93689c24fd2b17d0e358&auth_signature=6610b32d02b9df265e911b24409aadb63e4a2a706fe3ccc4a29a7fb4075b468e',
+  error: undefined,
+  status: 400,
+  body: 'auth_key should be a valid app key\n'
+}
+ POST /api/conversations/cmujfiij30002t5k8vhxif72a/messages 500 in 148ms (next.js: 13ms, proxy.ts: 9ms, application-code: 127ms)
+ GET /api/auth/session 200 in 28ms (next.js: 11ms, proxy.ts: 7ms, application-code: 10ms)
+ GET /api/auth/session 200 in 18ms (next.js: 5ms, proxy.ts: 6ms, application-code: 6ms)
+ GET /chat 200 in 44ms (next.js: 3ms, proxy.ts: 12ms, application-code: 28ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 79ms (next.js: 10ms, proxy.ts: 30ms, application-code: 39ms)
+ GET /api/auth/session 200 in 82ms (next.js: 23ms, proxy.ts: 31ms, application-code: 28ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 60ms (next.js: 8ms, proxy.ts: 19ms, application-code: 32ms)
+ GET /api/auth/session 200 in 60ms (next.js: 18ms, proxy.ts: 19ms, application-code: 23ms)
+ GET /api/auth/session 200 in 38ms (next.js: 12ms, proxy.ts: 13ms, application-code: 13ms)
+ GET /api/auth/session 200 in 51ms (next.js: 26ms, proxy.ts: 14ms, application-code: 12ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 39ms (next.js: 12ms, proxy.ts: 8ms, application-code: 18ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 30ms (next.js: 4ms, proxy.ts: 9ms, application-code: 16ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query BEGIN IMMEDIATE
+prisma:query INSERT INTO `main`.`Message` (`id`, `body`, `conversationId`, `senderId`, `createdAt`) VALUES (?,?,?,?,?) RETURNING `id` AS `id`
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query COMMIT
+⨯ Error [PusherRequestError]: Unexpected status code 400
+    at async POST (app\api\conversations\[id]\messages\route.ts:65:3)
+  63 |
+  64 |   // Trigger Pusher real-time event
+> 65 |   await pusherServer.trigger(
+     |   ^
+  66 |     `private-conversation-${conversationId}`,
+  67 |     "new-message",
+  68 |     message {
+  url: 'https://api-ap1.pusher.com/apps/your_app_id/events?auth_key=your_app_key&auth_timestamp=1790490048&auth_version=1.0&body_md5=84f45615be347acb853ee4be8912b85f&auth_signature=2a64b9a03a680da401b4d75801c50aaa58f5ce57a21bf6b6e28971a7892c0876',
+  error: undefined,
+  status: 400,
+  body: 'auth_key should be a valid app key\n'
+}
+ POST /api/conversations/cmujfiij30002t5k8vhxif72a/messages 500 in 345ms (next.js: 13ms, proxy.ts: 8ms, application-code: 324ms)
+ GET /api/auth/session 200 in 26ms (next.js: 13ms, proxy.ts: 6ms, application-code: 7ms)
+ GET /api/auth/session 200 in 19ms (next.js: 5ms, proxy.ts: 6ms, application-code: 9ms)
+ GET /chat 200 in 42ms (next.js: 5ms, proxy.ts: 7ms, application-code: 31ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 59ms (next.js: 10ms, proxy.ts: 22ms, application-code: 26ms)
+ GET /api/auth/session 200 in 59ms (next.js: 19ms, proxy.ts: 23ms, application-code: 18ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 52ms (next.js: 7ms, proxy.ts: 16ms, application-code: 29ms)
+ GET /api/auth/session 200 in 55ms (next.js: 20ms, proxy.ts: 16ms, application-code: 19ms)
+ GET /api/auth/session 200 in 25ms (next.js: 6ms, proxy.ts: 10ms, application-code: 9ms)
+ GET /api/auth/session 200 in 30ms (next.js: 7ms, proxy.ts: 10ms, application-code: 13ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 38ms (next.js: 11ms, proxy.ts: 9ms, application-code: 18ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 35ms (next.js: 5ms, proxy.ts: 6ms, application-code: 23ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query BEGIN IMMEDIATE
+prisma:query INSERT INTO `main`.`Message` (`id`, `body`, `conversationId`, `senderId`, `createdAt`) VALUES (?,?,?,?,?) RETURNING `id` AS `id`
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query COMMIT
+⨯ Error [PusherRequestError]: Unexpected status code 400
+    at async POST (app\api\conversations\[id]\messages\route.ts:65:3)
+  63 |
+  64 |   // Trigger Pusher real-time event
+> 65 |   await pusherServer.trigger(
+     |   ^
+  66 |     `private-conversation-${conversationId}`,
+  67 |     "new-message",
+  68 |     message {
+  url: 'https://api-ap1.pusher.com/apps/your_app_id/events?auth_key=your_app_key&auth_timestamp=1790490054&auth_version=1.0&body_md5=7e8681295e2afe5f60c6b1d38e233ea5&auth_signature=efc4b080ecf9d996d9a6a24afc1ffc1b0ecb79a54e7af434e29148ae97e1e8d0',
+  error: undefined,
+  status: 400,
+  body: 'auth_key should be a valid app key\n'
+}
+ POST /api/conversations/cmujfiij30002t5k8vhxif72a/messages 500 in 305ms (next.js: 12ms, proxy.ts: 7ms, application-code: 286ms)
+ GET /api/auth/session 200 in 30ms (next.js: 14ms, proxy.ts: 8ms, application-code: 8ms)
+ GET /api/auth/session 200 in 20ms (next.js: 4ms, proxy.ts: 6ms, application-code: 10ms)
+ GET /api/auth/session 200 in 28ms (next.js: 13ms, proxy.ts: 7ms, application-code: 8ms)
+ GET /api/auth/session 200 in 18ms (next.js: 4ms, proxy.ts: 6ms, application-code: 7ms)
+ GET /chat 200 in 39ms (next.js: 3ms, proxy.ts: 8ms, application-code: 29ms)
+ GET /api/auth/session 200 in 40ms (next.js: 16ms, proxy.ts: 15ms, application-code: 10ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 40ms (next.js: 3ms, proxy.ts: 14ms, application-code: 24ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/auth/session 200 in 39ms (next.js: 13ms, proxy.ts: 16ms, application-code: 10ms)
+ GET /api/conversations 200 in 38ms (next.js: 6ms, proxy.ts: 15ms, application-code: 17ms)
+ GET /api/auth/session 200 in 20ms (next.js: 4ms, proxy.ts: 8ms, application-code: 8ms)
+ GET /api/auth/session 200 in 22ms (next.js: 4ms, proxy.ts: 7ms, application-code: 11ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 37ms (next.js: 12ms, proxy.ts: 9ms, application-code: 17ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 27ms (next.js: 6ms, proxy.ts: 6ms, application-code: 15ms)
+ GET /api/auth/session 200 in 29ms (next.js: 13ms, proxy.ts: 7ms, application-code: 8ms)
+ GET /api/auth/session 200 in 17ms (next.js: 4ms, proxy.ts: 7ms, application-code: 7ms)
+ GET /api/auth/session 200 in 28ms (next.js: 13ms, proxy.ts: 7ms, application-code: 9ms)
+ GET /api/auth/session 200 in 19ms (next.js: 4ms, proxy.ts: 6ms, application-code: 10ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` <> ? ORDER BY `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+ GET /api/users 200 in 24ms (next.js: 4ms, proxy.ts: 8ms, application-code: 12ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` <> ? ORDER BY `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+ GET /api/users 200 in 26ms (next.js: 3ms, proxy.ts: 8ms, application-code: 15ms)
+ GET /api/auth/session 200 in 116ms (next.js: 28ms, proxy.ts: 58ms, application-code: 31ms)
+ GET /api/auth/session 200 in 85ms (next.js: 11ms, proxy.ts: 55ms, application-code: 18ms)
+ GET /api/auth/session 200 in 94ms (next.js: 23ms, proxy.ts: 21ms, application-code: 49ms)
+ GET /api/auth/session 200 in 106ms (next.js: 44ms, proxy.ts: 18ms, application-code: 43ms)
+ GET /chat 200 in 130ms (next.js: 16ms, proxy.ts: 44ms, application-code: 69ms)
+ GET /chat 200 in 121ms (next.js: 39ms, proxy.ts: 39ms, application-code: 43ms)
+ GET /chat 200 in 104ms (next.js: 9ms, proxy.ts: 25ms, application-code: 70ms)
+ GET /chat 200 in 101ms (next.js: 51ms, proxy.ts: 23ms, application-code: 27ms)
+ GET /chat 200 in 95ms (next.js: 4ms, proxy.ts: 49ms, application-code: 42ms)
+ GET /chat 200 in 62ms (next.js: 22ms, proxy.ts: 13ms, application-code: 27ms)
+ GET /chat 200 in 83ms (next.js: 6ms, proxy.ts: 33ms, application-code: 43ms)
+ GET /chat 200 in 69ms (next.js: 22ms, proxy.ts: 19ms, application-code: 28ms)
+ GET /chat 200 in 80ms (next.js: 5ms, proxy.ts: 34ms, application-code: 40ms)
+ GET /chat 200 in 60ms (next.js: 21ms, proxy.ts: 16ms, application-code: 24ms)
+ GET /chat 200 in 91ms (next.js: 5ms, proxy.ts: 30ms, application-code: 57ms)
+ GET /chat 200 in 77ms (next.js: 32ms, proxy.ts: 13ms, application-code: 32ms)
+ GET /chat 200 in 101ms (next.js: 8ms, proxy.ts: 39ms, application-code: 54ms)
+ GET /chat 200 in 82ms (next.js: 27ms, proxy.ts: 21ms, application-code: 33ms)
+ GET /chat 200 in 99ms (next.js: 5ms, proxy.ts: 40ms, application-code: 54ms)
+ GET /chat 200 in 74ms (next.js: 28ms, proxy.ts: 15ms, application-code: 32ms)
+ GET /chat 200 in 93ms (next.js: 9ms, proxy.ts: 38ms, application-code: 46ms)
+ GET /chat 200 in 72ms (next.js: 30ms, proxy.ts: 19ms, application-code: 23ms)
+ GET /chat 200 in 81ms (next.js: 5ms, proxy.ts: 30ms, application-code: 46ms)
+ GET /chat 200 in 64ms (next.js: 24ms, proxy.ts: 15ms, application-code: 25ms)
+ GET /chat 200 in 86ms (next.js: 5ms, proxy.ts: 32ms, application-code: 49ms)
+ GET /chat 200 in 70ms (next.js: 25ms, proxy.ts: 15ms, application-code: 30ms)
+ GET /chat 200 in 87ms (next.js: 6ms, proxy.ts: 36ms, application-code: 44ms)
+ GET /chat 200 in 65ms (next.js: 25ms, proxy.ts: 16ms, application-code: 24ms)
+ GET /chat 200 in 77ms (next.js: 4ms, proxy.ts: 30ms, application-code: 42ms)
+ GET /chat 200 in 60ms (next.js: 21ms, proxy.ts: 14ms, application-code: 26ms)
+ GET /chat 200 in 85ms (next.js: 6ms, proxy.ts: 30ms, application-code: 49ms)
+ GET /chat 200 in 69ms (next.js: 7ms, proxy.ts: 32ms, application-code: 29ms)
+ GET /chat 200 in 82ms (next.js: 5ms, proxy.ts: 35ms, application-code: 43ms)
+ GET /chat 200 in 61ms (next.js: 6ms, proxy.ts: 29ms, application-code: 27ms)
+ GET /chat 200 in 81ms (next.js: 6ms, proxy.ts: 31ms, application-code: 45ms)
+ GET /chat 200 in 64ms (next.js: 6ms, proxy.ts: 31ms, application-code: 27ms)
+ GET /chat 200 in 86ms (next.js: 6ms, proxy.ts: 31ms, application-code: 49ms)
+ GET /chat 200 in 67ms (next.js: 11ms, proxy.ts: 31ms, application-code: 25ms)
+ GET /chat 200 in 82ms (next.js: 6ms, proxy.ts: 30ms, application-code: 47ms)
+ GET /chat 200 in 64ms (next.js: 7ms, proxy.ts: 31ms, application-code: 27ms)
+ GET /chat 200 in 94ms (next.js: 6ms, proxy.ts: 31ms, application-code: 57ms)
+ GET /chat 200 in 89ms (next.js: 5ms, proxy.ts: 34ms, application-code: 50ms)
+ GET /chat 200 in 159ms (next.js: 14ms, proxy.ts: 46ms, application-code: 98ms)
+ GET /chat 200 in 133ms (next.js: 40ms, proxy.ts: 63ms, application-code: 30ms)
+ GET /chat 200 in 122ms (next.js: 5ms, proxy.ts: 73ms, application-code: 44ms)
+ GET /chat 200 in 63ms (next.js: 6ms, proxy.ts: 32ms, application-code: 24ms)
+ GET /chat 200 in 80ms (next.js: 4ms, proxy.ts: 31ms, application-code: 45ms)
+ GET /chat 200 in 63ms (next.js: 6ms, proxy.ts: 29ms, application-code: 28ms)
+ GET /chat 200 in 87ms (next.js: 5ms, proxy.ts: 33ms, application-code: 49ms)
+ GET /chat 200 in 69ms (next.js: 8ms, proxy.ts: 35ms, application-code: 26ms)
+ GET /chat 200 in 97ms (next.js: 4ms, proxy.ts: 35ms, application-code: 57ms)
+ GET /chat 200 in 74ms (next.js: 5ms, proxy.ts: 35ms, application-code: 33ms)
+ GET /chat 200 in 93ms (next.js: 5ms, proxy.ts: 42ms, application-code: 46ms)
+ GET /chat 200 in 62ms (next.js: 4ms, proxy.ts: 33ms, application-code: 25ms)
+ GET /api/auth/session 200 in 56ms (next.js: 23ms, proxy.ts: 20ms, application-code: 13ms)
+ GET /api/auth/session 200 in 22ms (next.js: 4ms, proxy.ts: 9ms, application-code: 9ms)
+✓ Compiled in 79ms
+ GET /chat 200 in 88ms (next.js: 22ms, proxy.ts: 13ms, application-code: 52ms)
+ GET /chat 200 in 109ms (next.js: 14ms, proxy.ts: 28ms, application-code: 67ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 120ms (next.js: 60ms, proxy.ts: 29ms, application-code: 30ms)
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 121ms (next.js: 68ms, proxy.ts: 29ms, application-code: 24ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 108ms (next.js: 18ms, proxy.ts: 28ms, application-code: 62ms)
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 104ms (next.js: 28ms, proxy.ts: 26ms, application-code: 50ms)
+ GET /api/auth/session 200 in 36ms (next.js: 15ms, proxy.ts: 9ms, application-code: 12ms)
+ GET /api/auth/session 200 in 23ms (next.js: 6ms, proxy.ts: 8ms, application-code: 9ms)
+ GET /api/auth/session 200 in 36ms (next.js: 14ms, proxy.ts: 11ms, application-code: 11ms)
+ GET /api/auth/session 200 in 31ms (next.js: 6ms, proxy.ts: 13ms, application-code: 13ms)
+ GET /api/auth/session 200 in 53ms (next.js: 22ms, proxy.ts: 15ms, application-code: 15ms)
+ GET /api/auth/session 200 in 69ms (next.js: 10ms, proxy.ts: 40ms, application-code: 20ms)
+ GET /api/auth/session 200 in 31ms (next.js: 15ms, proxy.ts: 8ms, application-code: 9ms)
+ GET /api/auth/session 200 in 20ms (next.js: 5ms, proxy.ts: 8ms, application-code: 8ms)
+ GET /chat 200 in 98ms (next.js: 4ms, proxy.ts: 17ms, application-code: 77ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 86ms (next.js: 9ms, proxy.ts: 31ms, application-code: 46ms)
+ GET /api/auth/session 200 in 89ms (next.js: 26ms, proxy.ts: 31ms, application-code: 31ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/auth/session 200 in 68ms (next.js: 23ms, proxy.ts: 27ms, application-code: 19ms)
+ GET /api/conversations 200 in 77ms (next.js: 10ms, proxy.ts: 29ms, application-code: 38ms)
+ GET /api/auth/session 200 in 50ms (next.js: 9ms, proxy.ts: 22ms, application-code: 18ms)
+ GET /api/auth/session 200 in 38ms (next.js: 12ms, proxy.ts: 17ms, application-code: 9ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 44ms (next.js: 13ms, proxy.ts: 9ms, application-code: 22ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 34ms (next.js: 5ms, proxy.ts: 10ms, application-code: 20ms)
+ GET /api/auth/session 200 in 33ms (next.js: 16ms, proxy.ts: 7ms, application-code: 9ms)
+ GET /api/auth/session 200 in 21ms (next.js: 5ms, proxy.ts: 9ms, application-code: 7ms)
+ GET /chat 200 in 55ms (next.js: 5ms, proxy.ts: 13ms, application-code: 38ms)
+ GET /api/auth/session 200 in 30ms (next.js: 11ms, proxy.ts: 11ms, application-code: 8ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 30ms (next.js: 3ms, proxy.ts: 11ms, application-code: 17ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/auth/session 200 in 35ms (next.js: 13ms, proxy.ts: 11ms, application-code: 11ms)
+ GET /api/conversations 200 in 36ms (next.js: 3ms, proxy.ts: 11ms, application-code: 22ms)
+ GET /api/auth/session 200 in 31ms (next.js: 8ms, proxy.ts: 13ms, application-code: 10ms)
+ GET /api/auth/session 200 in 51ms (next.js: 32ms, proxy.ts: 12ms, application-code: 8ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 34ms (next.js: 12ms, proxy.ts: 7ms, application-code: 15ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 29ms (next.js: 5ms, proxy.ts: 7ms, application-code: 17ms)
+ GET /api/auth/session 200 in 29ms (next.js: 11ms, proxy.ts: 7ms, application-code: 10ms)
+ GET /api/auth/session 200 in 21ms (next.js: 6ms, proxy.ts: 8ms, application-code: 7ms)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE (`main`.`Message`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query BEGIN IMMEDIATE
+prisma:query UPDATE `main`.`Message` SET `body` = ? WHERE (`main`.`Message`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `body` AS `body`, `conversationId` AS `conversationId`, `senderId` AS `senderId`, `createdAt` AS `createdAt`
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query COMMIT
+⨯ Error [PusherRequestError]: Unexpected status code 400
+    at async PUT (app\api\conversations\[id]\messages\[messageId]\route.ts:53:3)
+  51 |
+  52 |   // Trigger real-time update
+> 53 |   await pusherServer.trigger(
+     |   ^
+  54 |     `private-conversation-${conversationId}`,
+  55 |     "message-updated",
+  56 |     updatedMessage {
+  url: 'https://api-ap1.pusher.com/apps/your_app_id/events?auth_key=your_app_key&auth_timestamp=1790490367&auth_version=1.0&body_md5=3458bb3fb53daf5d69cf05b5e40c198e&auth_signature=b5b9ee0a8343eba5ec60e5641258dfa9bc03d233bbb869a38dc66267febff0b7',
+  error: undefined,
+  status: 400,
+  body: 'auth_key should be a valid app key\n'
+}
+ PUT /api/conversations/cmujfiij30002t5k8vhxif72a/messages/cmujfjnh4000dt5k8woqwmwvw 500 in 1235ms (next.js: 899ms, proxy.ts: 10ms, application-code: 325ms)
+ GET /api/auth/session 200 in 32ms (next.js: 14ms, proxy.ts: 9ms, application-code: 9ms)
+ GET /api/auth/session 200 in 17ms (next.js: 4ms, proxy.ts: 7ms, application-code: 6ms)
+ GET /chat 200 in 44ms (next.js: 5ms, proxy.ts: 8ms, application-code: 31ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/auth/session 200 in 38ms (next.js: 9ms, proxy.ts: 14ms, application-code: 15ms)
+ GET /api/conversations 200 in 44ms (next.js: 4ms, proxy.ts: 16ms, application-code: 24ms)
+prisma:query SELECT `main`.`Conversation`.`id`, `main`.`Conversation`.`createdAt` FROM `main`.`Conversation` WHERE EXISTS(SELECT `t0`.`conversationId` FROM `main`.`Participant` AS `t0` WHERE (`t0`.`userId` = ? AND (`main`.`Conversation`.`id`) = (`t0`.`conversationId`) AND `t0`.`conversationId` IS NOT NULL)) ORDER BY `main`.`Conversation`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE (`main`.`Participant`.`userId` <> ? AND `main`.`Participant`.`conversationId` IN (?)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` IN (?) ORDER BY `main`.`Message`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/conversations 200 in 33ms (next.js: 4ms, proxy.ts: 13ms, application-code: 16ms)
+ GET /api/auth/session 200 in 36ms (next.js: 11ms, proxy.ts: 14ms, application-code: 11ms)
+ GET /api/auth/session 200 in 21ms (next.js: 5ms, proxy.ts: 7ms, application-code: 9ms)
+ GET /api/auth/session 200 in 18ms (next.js: 4ms, proxy.ts: 7ms, application-code: 7ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 30ms (next.js: 11ms, proxy.ts: 7ms, application-code: 11ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 23ms (next.js: 4ms, proxy.ts: 7ms, application-code: 13ms)
+ GET /api/auth/session 200 in 32ms (next.js: 11ms, proxy.ts: 9ms, application-code: 11ms)
+ GET /api/auth/session 200 in 21ms (next.js: 4ms, proxy.ts: 7ms, application-code: 10ms)
+✓ Compiled in 49ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 151ms (next.js: 34ms, proxy.ts: 16ms, application-code: 101ms)
+ GET /chat 200 in 151ms (next.js: 15ms, proxy.ts: 48ms, application-code: 88ms)
+ GET /chat 200 in 143ms (next.js: 13ms, proxy.ts: 84ms, application-code: 47ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 162ms (next.js: 75ms, proxy.ts: 52ms, application-code: 36ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 68ms (next.js: 16ms, proxy.ts: 23ms, application-code: 29ms)
+prisma:query SELECT `main`.`Participant`.`id`, `main`.`Participant`.`conversationId`, `main`.`Participant`.`userId` FROM `main`.`Participant` WHERE ((`main`.`Participant`.`conversationId` = ? AND `main`.`Participant`.`userId` = ?) AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Message`.`id`, `main`.`Message`.`body`, `main`.`Message`.`conversationId`, `main`.`Message`.`senderId`, `main`.`Message`.`createdAt` FROM `main`.`Message` WHERE `main`.`Message`.`conversationId` = ? ORDER BY `main`.`Message`.`createdAt` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?,?) LIMIT ? OFFSET ?
+ GET /api/conversations/cmujfiij30002t5k8vhxif72a/messages 200 in 53ms (next.js: 11ms, proxy.ts: 18ms, application-code: 24ms)
+^C

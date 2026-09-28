@@ -1,0 +1,1 @@
+Failed to load config file "D:\laragon\www\Akselerachatapp\akselerachatapp" as a TypeScript/JavaScript module. Error: TypeError: (0 , _config.definePrismaConfig) is not a function
